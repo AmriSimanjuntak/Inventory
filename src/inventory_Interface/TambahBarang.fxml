@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="455.0" prefWidth="661.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventory_controller.TambahBarangController">
+   <children>
+      <TextField fx:id="kode_barang" layoutX="161.0" layoutY="97.0" />
+      <TextField fx:id="nama_barang" layoutX="161.0" layoutY="158.0" />
+      <TextField fx:id="lokasi_barang" layoutX="161.0" layoutY="212.0" />
+      <TextField fx:id="kondisi_barang" layoutX="161.0" layoutY="274.0" />
+      <TextField fx:id="jumlah_barang" layoutX="161.0" layoutY="338.0" />
+      <TextField fx:id="tanggal_masuk" layoutX="485.0" layoutY="97.0" />
+      <TextField fx:id="masa_berlaku" layoutX="485.0" layoutY="158.0" />
+      <Text layoutX="362.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal Masuk" wrappingWidth="131.661376953125">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="H_RESIZE" />
+         </cursor>
+      </Text>
+      <Text layoutX="22.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kode Barang" wrappingWidth="131.661376953125">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="H_RESIZE" />
+         </cursor>
+      </Text>
+      <Text layoutX="22.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Barang" wrappingWidth="131.661376953125">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="H_RESIZE" />
+         </cursor>
+      </Text>
+      <Text layoutX="22.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lokasi Barang" wrappingWidth="131.661376953125">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="H_RESIZE" />
+         </cursor>
+      </Text>
+      <Text layoutX="22.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kondisi Barang" wrappingWidth="131.661376953125">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="H_RESIZE" />
+         </cursor>
+      </Text>
+      <Text layoutX="22.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jumlah Barang" wrappingWidth="131.661376953125">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="H_RESIZE" />
+         </cursor>
+      </Text>
+      <Text layoutX="362.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Masa Berlaku" wrappingWidth="131.661376953125">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="H_RESIZE" />
+         </cursor>
+      </Text>
+      <Text layoutX="217.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tambah Barang" wrappingWidth="276.99468994140625">
+         <font>
+            <Font name="Footlight MT Light" size="35.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="H_RESIZE" />
+         </cursor>
+      </Text>
+      <Button fx:id="btnview" layoutX="507.0" layoutY="309.0" mnemonicParsing="false" onAction="#view" prefHeight="29.0" prefWidth="76.0" text="View Data">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="brnclear" layoutX="507.0" layoutY="225.0" mnemonicParsing="false" onAction="#clear" prefHeight="29.0" prefWidth="76.0" text="Clear">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnback" layoutX="383.0" layoutY="309.0" mnemonicParsing="false" onAction="#back" prefHeight="29.0" prefWidth="73.0" text="Back">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnsave" layoutX="382.0" layoutY="225.0" mnemonicParsing="false" onAction="#save" prefHeight="29.0" prefWidth="76.0" text="Save">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <TextField fx:id="jenis_barang" layoutX="161.0" layoutY="394.0" />
+      <Text layoutX="22.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jenis Barang" wrappingWidth="131.661376953125">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="H_RESIZE" />
+         </cursor>
+      </Text>
+      <Text fx:id="alert" layoutX="397.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="192.99993896484375" />
+   </children>
+</AnchorPane>

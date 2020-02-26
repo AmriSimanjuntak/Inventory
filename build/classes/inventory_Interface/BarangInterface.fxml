@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="516.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventory_controller.BarangController">
+   <children>
+      <TableView fx:id="tabelview" layoutX="19.0" layoutY="144.0" prefHeight="335.0" prefWidth="612.0">
+        <columns>
+          <TableColumn fx:id="tnomor" prefWidth="60.66668891906738" text="NO" />
+          <TableColumn fx:id="tkode" prefWidth="138.66661834716797" text="Kode Barang" />
+            <TableColumn fx:id="tnama" minWidth="4.0" prefWidth="186.6667022705078" text="Nama Barang" />
+            <TableColumn fx:id="tlokasi" prefWidth="126.66665649414062" text="Lokasi" />
+            <TableColumn fx:id="tkondisi" prefWidth="96.66668701171875" text="Kondisi" />
+        </columns>
+      </TableView>
+      <Button fx:id="tambah" layoutX="351.0" layoutY="103.0" mnemonicParsing="false" onAction="#tambahAction" prefHeight="25.0" prefWidth="59.0" style="-fx-background-color: #16c2ce;" text="Tambah" />
+      <Text layoutX="192.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daftar Barang Aset" wrappingWidth="294.1529998779297">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
+      <Button fx:id="hapusbtn" layoutX="433.0" layoutY="103.0" mnemonicParsing="false" onAction="#hapus" prefHeight="25.0" prefWidth="59.0" style="-fx-background-color: #16c2ce;" text="Hapus" />
+      <Button fx:id="detail" layoutX="531.0" layoutY="103.0" mnemonicParsing="false" onAction="#detailAction" style="-fx-background-color: #16c2ce;" text="Detail" />
+   </children>
+</AnchorPane>
