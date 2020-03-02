@@ -21,12 +21,36 @@ import javax.swing.JOptionPane;
  * @author Amri Simanjuntak;
  */
 public class KoneksiDB {
-    private static Connection connection;
-    private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/db_inventory";
-    private static final String DB_USERNAME = "root";
-    private static final String DB_PASSWORD = "";
-    private Statement stmt;
+//    private static Connection connection;
+//    private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+//    private static final String DB_URL = "jdbc:mysql://localhost:3306/db_inventory";
+//    private static final String DB_USERNAME = "root";
+//    private static final String DB_PASSWORD = "";
+ public static Connection con;
+    public static Statement stm;
+    public static Connection connectdb()
+    {
+        try
+        {
+           String url = "jdbc:mysql://localhost:3306/db_inventori?zeroDateTimeBehavior=convertToNull";
+           String user = "root";
+           String pass= "";
+           Class.forName("com.mysql.jdbc.Driver");
+           con =(Connection) DriverManager.getConnection(url,user,pass);
+           //stm = con.createStatement();
+            System.out.println("Koneksi berhasil;");
+            return con;
+        }
+        catch(Exception e)
+        {
+            System.err.println("koneksi gagal" +e.getMessage());
+            //return null;
+        }
+        return null;
+    }    
+
+ 
+    //private Statement stmt;
 
      public KoneksiDB() {
         openConnection();
@@ -34,8 +58,8 @@ public class KoneksiDB {
      public void openConnection() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            connection = (Connection) DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
-            stmt = connection.createStatement();
+            //con =DriverManager.getConnection(url,user,pass);
+            stm = con.createStatement();
         } catch (Exception ex) {
         }
     }
@@ -45,7 +69,7 @@ public class KoneksiDB {
         try {
             String sql = "INSERT INTO barang(kode_barang, nama_barang, kondisi_barang, jenis_barang, lokasi_barang, jumlah_barang, tanggal_masuk, masa_berlaku) VALUES ('" + rank.getKode_barang()+ "', '"
             + rank.getNama_barang()+"', '"+rank.getKondisi_barang()+"', '"+rank.getJenis_barang()+"', '"+rank.getLokasi_barang()+"', '"+rank.getJumlah_barang()+"', '"+rank.getTanggal_masuk()+"', '"+rank.getMasa_berlaku()+"')";
-           java.sql.PreparedStatement stmt = connection.prepareStatement(sql);
+           java.sql.PreparedStatement stmt = con.prepareStatement(sql);
             stmt.execute();
             return true;
         } catch (SQLException ex) {
@@ -58,7 +82,7 @@ public class KoneksiDB {
      public void removeBarang(String keyword) {
         try {
             String sql = "DELETE FROM barang where id_barang =  '" + keyword + "'";
-            stmt.execute(sql);
+            stm.execute(sql);
         } catch (SQLException ex) {
             Logger.getLogger(KoneksiDB.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -67,10 +91,10 @@ public class KoneksiDB {
     public ArrayList<Barang> getAllBarang() {
           ArrayList<Barang> arr = new ArrayList<>();
         try {
-            connection = (Connection) DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
-            stmt = connection.createStatement();
+            //con = (Connection) DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
+            stm = con.createStatement();
             String sql = "SELECT * FROM barang";
-            ResultSet rs =  stmt.executeQuery(sql);
+            ResultSet rs =  stm.executeQuery(sql);
 
             while (rs.next()) {
                 Barang score = new Barang();

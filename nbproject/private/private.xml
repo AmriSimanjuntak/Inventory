@@ -3,20 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Semester%205/Tugas%20Akhir%201/Implementasi/InventoryApplication/src/inventory_controller/BarangController.java</file>
-            <file>file:/D:/Semester%205/Tugas%20Akhir%201/Implementasi/InventoryApplication/src/inventory_KoneksiDatabase/KoneksiDB.java</file>
-            <file>file:/D:/Semester%205/Tugas%20Akhir%201/Implementasi/InventoryApplication/src/inventory_Interface/MenuUtamaAdmin.fxml</file>
-            <file>file:/D:/Semester%205/Tugas%20Akhir%201/Implementasi/InventoryApplication/src/inventory_Interface/DaftarPermintaan.fxml</file>
-            <file>file:/D:/Semester%205/Tugas%20Akhir%201/Implementasi/InventoryApplication/src/inventory_Interface/BarangInterface.fxml</file>
-            <file>file:/D:/Semester%205/Tugas%20Akhir%201/Implementasi/InventoryApplication/nbproject/jfx-impl.xml</file>
-            <file>file:/D:/Semester%205/Tugas%20Akhir%201/Implementasi/InventoryApplication/src/inventory_controller/MenuUtamaAdminController.java</file>
-            <file>file:/D:/Semester%205/Tugas%20Akhir%201/Implementasi/InventoryApplication/src/main/Main.java</file>
-            <file>file:/D:/Semester%205/Tugas%20Akhir%201/Implementasi/InventoryApplication/src/inventory_Entity/Barang.java</file>
-            <file>file:/D:/Semester%205/Tugas%20Akhir%201/Implementasi/InventoryApplication/src/inventory_controller/TambahBarangController.java</file>
-            <file>file:/D:/Semester%205/Tugas%20Akhir%201/Implementasi/InventoryApplication/src/inventory_controller/DetailBarangController.java</file>
-            <file>file:/D:/Semester%205/Tugas%20Akhir%201/Implementasi/InventoryApplication/src/inventory_controller/DaftarPermintaanController.java</file>
-            <file>file:/D:/Semester%205/Tugas%20Akhir%201/Implementasi/InventoryApplication/src/inventory_Interface/TambahBarang.fxml</file>
-            <file>file:/D:/Semester%205/Tugas%20Akhir%201/Implementasi/InventoryApplication/src/inventory_Interface/DetailBarang.fxml</file>
+            <file>file:/E:/Kampus/SEMESTER5/TA/2/Inventory/src/inventory_controller/MenuUtamaUserController.java</file>
+            <file>file:/E:/Kampus/SEMESTER5/TA/2/Inventory/src/inventory_Entity/Staf_inventory.java</file>
+            <file>file:/E:/Kampus/SEMESTER5/TA/2/Inventory/src/inventory_controller/LoginController.java</file>
+            <file>file:/E:/Kampus/SEMESTER5/TA/2/Inventory/src/inventory_Interface/FormPermintaanBarang.fxml</file>
+            <file>file:/E:/Kampus/SEMESTER5/TA/2/Inventory/src/inventory_Entity/User.java</file>
+            <file>file:/E:/Kampus/SEMESTER5/TA/2/Inventory/src/inventory_Entity/Autentikasi.java</file>
+            <file>file:/E:/Kampus/SEMESTER5/TA/2/Inventory/src/inventory_Interface/MenuUtamaUser.fxml</file>
         </group>
     </open-files>
 </project-private>
