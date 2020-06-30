@@ -28,6 +28,7 @@ import inventory_Entity.Autentikasi;
 import java.sql.SQLException;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.ButtonType;
 import javax.swing.JOptionPane;
 
 /**
@@ -86,7 +87,7 @@ public class LoginController implements Initializable {
          rs = stmt.executeQuery(sql);
          rs.next();
          autentikasi = new Autentikasi(rs.getInt("autentikasi_id"),rs.getString("username"),rs.getString("password"),rs.getInt("role_id"));
-//         String usersql = "select * from user where autentikasi_id = " + autentikasi.getAutentikasi_id();
+         String usersql = "select * from user where autentikasi_id = " + autentikasi.getAutentikasi_id();
 //         rs = stmt.executeQuery(usersql);
 //         rs.next();
 //         user  = new User(rs.getInt("id_user"), rs.getString("nip"), rs.getString("nama"), rs.getString ("username"), rs.getString("password"),rs.getInt("autentikasi_id"));
@@ -101,23 +102,22 @@ public class LoginController implements Initializable {
                 System.out.println("VendorError: " + ex.getErrorCode());        
         }
          
-         if(rs==null){
-             System.out.println("Invalide Username or Paswword2");
-         } 
-         
+//         if(rs==null){
+//             System.out.println("Invalide Username or Paswword2");
+//         } 
+//         System.out.println(autentikasi.getPassword()+" ssss");
          if(autentikasi.getPassword().equals(password.getText())){
-             if (autentikasi.getRole_id() ==1){
-                 System.out.println("1");
-                 AnchorPane pane = FXMLLoader.load(getClass().getResource("/inventory_Interface/HalamanUtamaUser.fxml"));
-            rootPane.getChildren().setAll(pane);
-             }else if(autentikasi.getRole_id() ==2){
-                 System.out.println("2");
-               AnchorPane pane = FXMLLoader.load(getClass().getResource("/inventory_Interface/MenuUtamaAdmin.fxml"));
-            rootPane.getChildren().setAll(pane);   
-         }
-         else{
-              System.out.println("Invalide Username Or Password");
-         }
+             //System.out.println(autentikasi.getRole_id()+ " ssss");
+             if(autentikasi.getRole_id() == 1){
+                //System.out.println("1");
+                AnchorPane pane = FXMLLoader.load(getClass().getResource("/inventory_Interface/MenuUtamaUser.fxml"));
+                rootPane.getChildren().setAll(pane);
+             }else if(autentikasi.getRole_id() == 2){
+                 //System.out.println("2");
+                 AnchorPane pane = FXMLLoader.load(getClass().getResource("/inventory_Interface/MenuUtamaAdmin.fxml"));
+                 rootPane.getChildren().setAll(pane); 
+             }
+          
          
          
    //      Koneksi db = new Koneksi();
@@ -134,8 +134,13 @@ public class LoginController implements Initializable {
 //        else{
 //            System.out.println("Invalide Username Or Password");
 //        }
-   }
-  
+   }    else{
+//                System.out.println("Invalide Username Or Password");
+            Alert alert = new Alert(Alert.AlertType.NONE, "Invalid Username Or Password", ButtonType.OK);
+            alert.setTitle("Kesalahan pada Login");
+            alert.showAndWait();
+         }
+         
      }
    
      

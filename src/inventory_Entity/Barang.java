@@ -29,7 +29,6 @@ public class Barang {
         this.id_barang = id_barang;
     }
     
-
     public String getKode_barang() {
         return kode_barang;
     }

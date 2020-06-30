@@ -26,8 +26,11 @@ public class MenuUtamaAdminController implements Initializable {
     private Button ShowPermintaan;
     @FXML
     private Button ShowBarang;
+    //private AnchorPane pane;
     @FXML
-    private AnchorPane pane;
+    private Button btnlgn;
+    @FXML
+    private AnchorPane rootpane;
 
     /**
      * Initializes the controller class.
@@ -40,13 +43,19 @@ public class MenuUtamaAdminController implements Initializable {
     @FXML
     private void ShowPermintaan(ActionEvent event) throws IOException {
         AnchorPane panes = FXMLLoader.load(getClass().getResource("/inventory_Interface/DaftarPermintaan.fxml"));
-            pane.getChildren().setAll(panes);
+            rootpane.getChildren().setAll(panes);
     }
 
     @FXML
     private void ShowBarang(ActionEvent event) throws IOException {
         AnchorPane panes = FXMLLoader.load(getClass().getResource("/inventory_Interface/BarangInterface.fxml"));
-            pane.getChildren().setAll(panes);
+            rootpane.getChildren().setAll(panes);
+    }
+
+    @FXML
+    private void backlgn(ActionEvent event)  throws IOException {
+         AnchorPane pane = FXMLLoader.load(getClass().getResource("/inventory_Interface/Login.fxml"));
+        rootpane.getChildren().setAll(pane);
     }
     
 }

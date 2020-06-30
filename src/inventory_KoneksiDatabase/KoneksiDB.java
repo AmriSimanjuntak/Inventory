@@ -7,6 +7,7 @@ package inventory_KoneksiDatabase;
 
 import com.mysql.jdbc.Connection;
 import inventory_Entity.Barang;
+import inventory_Entity.Permintaan_barang;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -78,6 +79,20 @@ public class KoneksiDB {
         return false;
     }
      
+      public boolean addForm(Permintaan_barang rank) {      
+        System.out.println(rank.toString());
+        try {
+            String sql = "INSERT INTO detail_permintaan_barang(nama_barang, jumlah_permintaaan, gambar_barang, kode_permintaan_barang, tanggal_permintaan, status_request) VALUES ('" + rank.getNama_barang()+ "', "
+            + rank.getJumlah_permintaan()+",'"+rank.getGambar_barang()+"', '"+rank.getKode_permintaan_barang()+"', '"+rank.getTanggal_permintaan()+"','"+rank.getStatus_request()+"')";
+           java.sql.PreparedStatement stmt = con.prepareStatement(sql);
+            stmt.execute();
+            return true;
+        } catch (SQLException ex) {
+            Logger.getLogger(KoneksiDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
+    }
+     
      
      public void removeBarang(String keyword) {
         try {
@@ -106,6 +121,36 @@ public class KoneksiDB {
                 score.setJenis_barang(rs.getString("jenis_barang"));
                 score.setTanggal_masuk(rs.getString("tanggal_masuk"));
                 score.setMasa_berlaku(rs.getString("masa_berlaku"));
+                
+                arr.add(score);
+            }
+            return arr;
+        } catch (SQLException ex) {
+            Logger.getLogger(KoneksiDB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return arr;
+}
+    
+    
+     public ArrayList<Permintaan_barang> getAllPermintaan_barang() {
+          ArrayList<Permintaan_barang> arr = new ArrayList<>();
+        try {
+            //con = (Connection) DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
+            stm = con.createStatement();
+            String sql = "SELECT * FROM detail_permintaan_barang";
+            ResultSet rs =  stm.executeQuery(sql);
+
+            while (rs.next()) {
+                Permintaan_barang score = new Permintaan_barang();
+                score.setId_detail_permintaan(rs.getInt("id_detail_permintaan"));
+                score.setKode_permintaan_barang(rs.getString("kode_permintaan_barang"));
+                score.setStatus_request(rs.getString("status_request"));
+                score.setTanggal_permintaan(rs.getString("tanggal_permintaan"));
+//                score.setLokasi_barang(rs.getString("lokasi_barang"));
+//                score.setKondisi_barang(rs.getString("kondisi_barang"));
+//                score.setJenis_barang(rs.getString("jenis_barang"));
+//                score.setTanggal_masuk(rs.getString("tanggal_masuk"));
+//                score.setMasa_berlaku(rs.getString("masa_berlaku"));
                 
                 arr.add(score);
             }
