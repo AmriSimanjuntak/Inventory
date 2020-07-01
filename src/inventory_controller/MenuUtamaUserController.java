@@ -18,19 +18,18 @@ import javafx.scene.layout.AnchorPane;
 /**
  * FXML Controller class
  *
- * @author Amri Simanjuntak;
+ * @author Januar Tampubolon
  */
-public class MenuUtamaAdminController implements Initializable {
+public class MenuUtamaUserController implements Initializable {
 
     @FXML
-    private Button ShowPermintaan;
+    private AnchorPane rootPane;
     @FXML
-    private Button ShowBarang;
-    //private AnchorPane pane;
+    private Button ShowRiwayat;
+    @FXML
+    private Button buatForm;
     @FXML
     private Button btnlgn;
-    @FXML
-    private AnchorPane rootpane;
 
     /**
      * Initializes the controller class.
@@ -41,21 +40,21 @@ public class MenuUtamaAdminController implements Initializable {
     }    
 
     @FXML
-    private void ShowPermintaan(ActionEvent event) throws IOException {
-        AnchorPane panes = FXMLLoader.load(getClass().getResource("/inventory_Interface/DaftarPermintaan.fxml"));
-            rootpane.getChildren().setAll(panes);
+    private void ShowBarang(ActionEvent event) throws IOException {
+        AnchorPane panes = FXMLLoader.load(getClass().getResource("/inventory_Interface/RiwayatPermintaan.fxml"));
+            rootPane.getChildren().setAll(panes);
     }
 
     @FXML
-    private void ShowBarang(ActionEvent event) throws IOException {
-        AnchorPane panes = FXMLLoader.load(getClass().getResource("/inventory_Interface/BarangInterface.fxml"));
-            rootpane.getChildren().setAll(panes);
+    private void ShowPermintaan(ActionEvent event) throws IOException {
+        AnchorPane panes = FXMLLoader.load(getClass().getResource("/inventory_Interface/FormPermintaanBarang.fxml"));
+            rootPane.getChildren().setAll(panes);
     }
 
     @FXML
     private void backlgn(ActionEvent event)  throws IOException {
          AnchorPane pane = FXMLLoader.load(getClass().getResource("/inventory_Interface/Login.fxml"));
-        rootpane.getChildren().setAll(pane);
+        rootPane.getChildren().setAll(pane);
     }
-    
 }
+    

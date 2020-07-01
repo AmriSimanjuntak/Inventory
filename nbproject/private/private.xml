@@ -2,21 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/D:/Semester%205/Tugas%20Akhir%201/Implementasi/InventoryApplication/src/inventory_controller/BarangController.java</file>
-            <file>file:/D:/Semester%205/Tugas%20Akhir%201/Implementasi/InventoryApplication/src/inventory_KoneksiDatabase/KoneksiDB.java</file>
-            <file>file:/D:/Semester%205/Tugas%20Akhir%201/Implementasi/InventoryApplication/src/inventory_Interface/MenuUtamaAdmin.fxml</file>
-            <file>file:/D:/Semester%205/Tugas%20Akhir%201/Implementasi/InventoryApplication/src/inventory_Interface/DaftarPermintaan.fxml</file>
-            <file>file:/D:/Semester%205/Tugas%20Akhir%201/Implementasi/InventoryApplication/src/inventory_Interface/BarangInterface.fxml</file>
-            <file>file:/D:/Semester%205/Tugas%20Akhir%201/Implementasi/InventoryApplication/nbproject/jfx-impl.xml</file>
-            <file>file:/D:/Semester%205/Tugas%20Akhir%201/Implementasi/InventoryApplication/src/inventory_controller/MenuUtamaAdminController.java</file>
-            <file>file:/D:/Semester%205/Tugas%20Akhir%201/Implementasi/InventoryApplication/src/main/Main.java</file>
-            <file>file:/D:/Semester%205/Tugas%20Akhir%201/Implementasi/InventoryApplication/src/inventory_Entity/Barang.java</file>
-            <file>file:/D:/Semester%205/Tugas%20Akhir%201/Implementasi/InventoryApplication/src/inventory_controller/TambahBarangController.java</file>
-            <file>file:/D:/Semester%205/Tugas%20Akhir%201/Implementasi/InventoryApplication/src/inventory_controller/DetailBarangController.java</file>
-            <file>file:/D:/Semester%205/Tugas%20Akhir%201/Implementasi/InventoryApplication/src/inventory_controller/DaftarPermintaanController.java</file>
-            <file>file:/D:/Semester%205/Tugas%20Akhir%201/Implementasi/InventoryApplication/src/inventory_Interface/TambahBarang.fxml</file>
-            <file>file:/D:/Semester%205/Tugas%20Akhir%201/Implementasi/InventoryApplication/src/inventory_Interface/DetailBarang.fxml</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

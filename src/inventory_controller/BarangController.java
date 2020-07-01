@@ -40,7 +40,7 @@ public class BarangController implements Initializable {
     
     private int id=-1;
     
-    @FXML
+    @FXML   
     private AnchorPane pane;
 
     @FXML

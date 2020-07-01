@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventory_controller.RiwayatPermintaanController">
+   <children>
+      <Text layoutX="145.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Riwayat Permintaan" wrappingWidth="309.99468994140625">
+         <font>
+            <Font name="Footlight MT Light" size="35.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tabelview" layoutX="7.0" layoutY="103.0" prefHeight="265.0" prefWidth="586.0">
+         <columns>
+            <TableColumn fx:id="tnomor" prefWidth="60.66668891906738" text="NO" />
+            <TableColumn fx:id="ttanggal" prefWidth="269.0" text="Tanggal" />
+            <TableColumn fx:id="taction" minWidth="4.0" prefWidth="281.0" text="Action" />
+         </columns>
+      </TableView>
+      <Button layoutX="462.0" layoutY="68.0" mnemonicParsing="false" onAction="#btnback" text="Back to Dashboard" />
+   </children>
+</AnchorPane>

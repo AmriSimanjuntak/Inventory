@@ -1,0 +1,2 @@
+-Ini langsung digabungkan sama master atau engak(branch kerjaan januar)
+-kalau iya langsung merge pull sama mu amri.
